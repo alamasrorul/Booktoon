@@ -97,7 +97,7 @@ class MateriActivity : AppCompatActivity() {
 //
             if(data == "3") {
 //else {
-//                    sliderItems = ArrayList()
+                  sliderItems = ArrayList()
                 sliderItems.add(MateriModel(12, R.drawable.slide15))
                 sliderItems.add(MateriModel(13, R.drawable.slide16))
                 sliderItems.add(MateriModel(14, R.drawable.slide17))
@@ -106,18 +106,18 @@ class MateriActivity : AppCompatActivity() {
                  viewPager.adapter = adapter
                 }
             if(data == "4") {
-//                    sliderItems = ArrayList()
+                    sliderItems = ArrayList()
                 sliderItems.add(MateriModel(15, R.drawable.slide18))
                 sliderItems.add(MateriModel(16, R.drawable.slide19))
                 sliderItems.add(MateriModel(17, R.drawable.slide20))
                 sliderItems.add(MateriModel(18, R.drawable.slide21))
                 sliderItems.add(MateriModel(19, R.drawable.slide22))
 
-//                    val adapter = SlideImageAdapter(context, sliderItems as ArrayList<MateriModel>)
-//                    viewPager.adapter = adapter
+                    val adapter = SlideImageAdapter(context, sliderItems as ArrayList<MateriModel>)
+                    viewPager.adapter = adapter
 }
             if(data == "5") {
-//                    sliderItems = ArrayList()
+                  sliderItems = ArrayList()
                 sliderItems.add(MateriModel(20, R.drawable.slide23))
                 sliderItems.add(MateriModel(21, R.drawable.slide24))
                 sliderItems.add(MateriModel(22, R.drawable.slide25))
@@ -129,7 +129,7 @@ class MateriActivity : AppCompatActivity() {
                     viewPager.adapter = adapter
 }
             if(data == "6"){
-//                    sliderItems = ArrayList()
+                   sliderItems = ArrayList()
                 sliderItems.add(MateriModel(27, R.drawable.slide31))
                 sliderItems.add(MateriModel(28, R.drawable.slide32))
                 sliderItems.add(MateriModel(29, R.drawable.slide33))
@@ -141,7 +141,7 @@ class MateriActivity : AppCompatActivity() {
                     viewPager.adapter = adapter
 }
         if(data == "7") {
-//                    sliderItems = ArrayList()
+                    sliderItems = ArrayList()
                 sliderItems.add(MateriModel(33, R.drawable.slide37))
                 sliderItems.add(MateriModel(34, R.drawable.slide38))
                 sliderItems.add(MateriModel(35, R.drawable.slide39))
@@ -151,7 +151,7 @@ class MateriActivity : AppCompatActivity() {
 viewPager.adapter = adapter
     }
             if(data == "8") {
-//                    sliderItems = ArrayList()
+                    sliderItems = ArrayList()
                 sliderItems.add(MateriModel(37, R.drawable.slide41))
                 sliderItems.add(MateriModel(38, R.drawable.slide42))
                 sliderItems.add(MateriModel(39, R.drawable.slide43))
