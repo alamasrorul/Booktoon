@@ -10,13 +10,14 @@
         android:roundIcon="@drawable/icon"
         android:supportsRtl="true"
         android:theme="@style/NoActionBar">
-        <activity android:name=".IdentitasActivity"></activity>
+        <activity android:name=".MainActivity"/>
+        <activity android:name=".IdentitasActivity" />
         <activity android:name=".ListMateriActivity" />
         <activity android:name=".MateriActivity" />
         <activity android:name=".DeskripsiActivity" />
         <activity android:name=".SoalActivity" />
         <activity android:name=".PetunjukActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

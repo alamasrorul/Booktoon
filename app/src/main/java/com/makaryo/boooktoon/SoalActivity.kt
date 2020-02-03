@@ -9,10 +9,13 @@ import java.nio.file.Files.size
 import androidx.core.app.ComponentActivity.ExtraData
 import androidx.core.content.ContextCompat.getSystemService
 import android.icu.lang.UCharacter.GraphemeClusterBreak.T
+import android.view.LayoutInflater
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.*
+import androidx.appcompat.app.AlertDialog
+import kotlinx.android.synthetic.main.score.*
 import kotlinx.android.synthetic.main.soal_activity.*
 import kotlinx.android.synthetic.main.soal_fragment.*
 import kotlinx.android.synthetic.main.soal_fragment2.*
@@ -82,10 +85,28 @@ class SoalActivity : AppCompatActivity() {
 
         btnA!!.setOnClickListener(object : View.OnClickListener {
             override fun onClick(v: View) {
+
                 val curr = listEval!![currNo]
                 curr.pilihan = "A"
                 btnA.setBackgroundDrawable(resources.getDrawable(R.drawable.button_click))
                 prepareAnswer(true, false, curr)
+
+                if (currNo + 1 >= listEval!!.size) {
+                    showResult()
+                    return
+                }
+                if (currNo % 2 == 0){
+                    sc1!!.fullScroll(ScrollView.FOCUS_UP)
+                }
+                else{
+                    sc2!!.fullScroll(ScrollView.FOCUS_UP)
+                }
+                prepareQuest(listEval!![++currNo])
+
+                container!!.setOutAnimation(this@SoalActivity, R.anim.out_to_left)
+                container!!.setInAnimation(this@SoalActivity, R.anim.in_from_right)
+                container!!.showNext()
+
             }
         })
         btnB!!.setOnClickListener(object : View.OnClickListener {
@@ -94,6 +115,22 @@ class SoalActivity : AppCompatActivity() {
                 curr.pilihan = "B"
                 btnB.setBackgroundDrawable(resources.getDrawable(R.drawable.button_click))
                 prepareAnswer(true, false, curr)
+                if (currNo + 1 >= listEval!!.size) {
+                    showResult()
+                    return
+                }
+                if (currNo % 2 == 0){
+                    sc1!!.fullScroll(ScrollView.FOCUS_UP)
+                }
+                else{
+                    sc2!!.fullScroll(ScrollView.FOCUS_UP)
+                }
+                prepareQuest(listEval!![++currNo])
+
+                container!!.setOutAnimation(this@SoalActivity, R.anim.out_to_left)
+                container!!.setInAnimation(this@SoalActivity, R.anim.in_from_right)
+                container!!.showNext()
+
             }
         })
         btnC!!.setOnClickListener {
@@ -101,18 +138,66 @@ class SoalActivity : AppCompatActivity() {
             curr.pilihan = "C"
             btnC.setBackgroundDrawable(resources.getDrawable(R.drawable.button_click))
             prepareAnswer(true, false, curr)
+            if (currNo + 1 >= listEval!!.size) {
+                showResult()
+                return@setOnClickListener
+            }
+            if (currNo % 2 == 0){
+                sc1!!.fullScroll(ScrollView.FOCUS_UP)
+            }
+            else{
+                sc2!!.fullScroll(ScrollView.FOCUS_UP)
+            }
+            prepareQuest(listEval!![++currNo])
+
+            container!!.setOutAnimation(this@SoalActivity, R.anim.out_to_left)
+            container!!.setInAnimation(this@SoalActivity, R.anim.in_from_right)
+            container!!.showNext()
+
         }
         btnD!!.setOnClickListener {
             val curr = listEval!![currNo]
             curr.pilihan = "D"
             btnD.setBackgroundDrawable(resources.getDrawable(R.drawable.button_click))
             prepareAnswer(true, false, curr)
+            if (currNo + 1 >= listEval!!.size) {
+                showResult()
+                return@setOnClickListener
+            }
+            if (currNo % 2 == 0){
+                sc1!!.fullScroll(ScrollView.FOCUS_UP)
+            }
+            else{
+                sc2!!.fullScroll(ScrollView.FOCUS_UP)
+            }
+            prepareQuest(listEval!![++currNo])
+
+            container!!.setOutAnimation(this@SoalActivity, R.anim.out_to_left)
+            container!!.setInAnimation(this@SoalActivity, R.anim.in_from_right)
+            container!!.showNext()
+
         }
         btnE!!.setOnClickListener {
             val curr = listEval!![currNo]
             curr.pilihan = "E"
             btnE.setBackgroundDrawable(resources.getDrawable(R.drawable.button_click))
             prepareAnswer(true, false, curr)
+            if (currNo + 1 >= listEval!!.size) {
+                showResult()
+                return@setOnClickListener
+            }
+            if (currNo % 2 == 0){
+                sc1!!.fullScroll(ScrollView.FOCUS_UP)
+            }
+            else{
+                sc2!!.fullScroll(ScrollView.FOCUS_UP)
+            }
+            prepareQuest(listEval!![++currNo])
+
+            container!!.setOutAnimation(this@SoalActivity, R.anim.out_to_left)
+            container!!.setInAnimation(this@SoalActivity, R.anim.in_from_right)
+            container!!.showNext()
+
         }
 
         btnA2!!.setOnClickListener {
@@ -120,24 +205,89 @@ class SoalActivity : AppCompatActivity() {
             curr.pilihan = "A"
             btnA2.setBackgroundDrawable(resources.getDrawable(R.drawable.button_click))
             prepareAnswer(false, false, curr)
+            if (currNo + 1 >= listEval!!.size) {
+                showResult()
+                return@setOnClickListener
+            }
+            if (currNo % 2 == 0){
+                sc1!!.fullScroll(ScrollView.FOCUS_UP)
+            }
+            else{
+                sc2!!.fullScroll(ScrollView.FOCUS_UP)
+            }
+            prepareQuest(listEval!![++currNo])
+
+            container!!.setOutAnimation(this@SoalActivity, R.anim.out_to_left)
+            container!!.setInAnimation(this@SoalActivity, R.anim.in_from_right)
+            container!!.showNext()
+
+
         }
         btnB2!!.setOnClickListener {
             val curr = listEval!![currNo]
             curr.pilihan = "B"
             btnB2.setBackgroundDrawable(resources.getDrawable(R.drawable.button_click))
             prepareAnswer(false, false, curr)
+            if (currNo + 1 >= listEval!!.size) {
+                showResult()
+                return@setOnClickListener
+            }
+            if (currNo % 2 == 0){
+                sc1!!.fullScroll(ScrollView.FOCUS_UP)
+            }
+            else{
+                sc2!!.fullScroll(ScrollView.FOCUS_UP)
+            }
+            prepareQuest(listEval!![++currNo])
+
+            container!!.setOutAnimation(this@SoalActivity, R.anim.out_to_left)
+            container!!.setInAnimation(this@SoalActivity, R.anim.in_from_right)
+            container!!.showNext()
+
         }
         btnC2!!.setOnClickListener {
             val curr = listEval!![currNo]
             curr.pilihan = "C"
             btnC2.setBackgroundDrawable(resources.getDrawable(R.drawable.button_click))
             prepareAnswer(false, false, curr)
+            if (currNo + 1 >= listEval!!.size) {
+                showResult()
+                return@setOnClickListener
+            }
+            if (currNo % 2 == 0){
+                sc1!!.fullScroll(ScrollView.FOCUS_UP)
+            }
+            else{
+                sc2!!.fullScroll(ScrollView.FOCUS_UP)
+            }
+            prepareQuest(listEval!![++currNo])
+
+            container!!.setOutAnimation(this@SoalActivity, R.anim.out_to_left)
+            container!!.setInAnimation(this@SoalActivity, R.anim.in_from_right)
+            container!!.showNext()
+
         }
         btnD2!!.setOnClickListener {
             val curr = listEval!![currNo]
             curr.pilihan = "D"
             btnD2.setBackgroundDrawable(resources.getDrawable(R.drawable.button_click))
             prepareAnswer(false, false, curr)
+            if (currNo + 1 >= listEval!!.size) {
+                showResult()
+                return@setOnClickListener
+            }
+            if (currNo % 2 == 0){
+                sc1!!.fullScroll(ScrollView.FOCUS_UP)
+            }
+            else{
+                sc2!!.fullScroll(ScrollView.FOCUS_UP)
+            }
+            prepareQuest(listEval!![++currNo])
+
+            container!!.setOutAnimation(this@SoalActivity, R.anim.out_to_left)
+            container!!.setInAnimation(this@SoalActivity, R.anim.in_from_right)
+            container!!.showNext()
+
         }
         btnE2!!.setOnClickListener(object : View.OnClickListener {
             override fun onClick(v: View) {
@@ -145,6 +295,22 @@ class SoalActivity : AppCompatActivity() {
                 curr.pilihan = "E"
                 btnE2.setBackgroundDrawable(resources.getDrawable(R.drawable.button_click))
                 prepareAnswer(false, false, curr)
+                if (currNo + 1 >= listEval!!.size) {
+                    showResult()
+                    return
+                }
+                if (currNo % 2 == 0){
+                    sc1!!.fullScroll(ScrollView.FOCUS_UP)
+                }
+                else{
+                    sc2!!.fullScroll(ScrollView.FOCUS_UP)
+                }
+                prepareQuest(listEval!![++currNo])
+
+                container!!.setOutAnimation(this@SoalActivity, R.anim.out_to_left)
+                container!!.setInAnimation(this@SoalActivity, R.anim.in_from_right)
+                container!!.showNext()
+
             }
         })
         prepareQuest(listEval!![0])
@@ -362,10 +528,10 @@ class SoalActivity : AppCompatActivity() {
 
         if (!answered) {
 //            ivJwbn!!.setImageResource(curr.pilihanRes)
-            if (currNo == listEval!!.size - 1)
-                btnnext!!.text = "finish"
-            else
-                btnnext!!.text = "next"
+//            if (currNo == listEval!!.size - 1)
+//                btnnext!!.text = "finish"
+//            else
+//                btnnext!!.text = "next"
 
             val choice = curr.pilihan
             val key = curr.kunci
@@ -397,8 +563,42 @@ class SoalActivity : AppCompatActivity() {
     }
 
     private fun showResult() {
+
         score *= 5
+
+        //val dialogview=LayoutInflater.from(this).inflate(R.layout.score,null)
+
+
+        val builder =AlertDialog.Builder(this)
+          //  .setView(dialogview)
+        val layout = LinearLayout(this)
+        val text1= TextView(this)
+        //val text2= TextView(this)
+        text1.text = "Point yang Anda Dapat : " + score.toString()
+
+        println(score)
+        //text2.text=score.toString()
+        layout.orientation= LinearLayout.VERTICAL
+
+        layout.addView(text1)
+        //layout.addView(text2)
+        layout.setPadding(50,40,50,40)
+        builder.setView(layout)
+
+
+        builder.create().show()
+
+
+        //val malertDialogView= builder.show()
+
+
+
+//        dialogview.dialogCancelBtn.setOnclickListener{
+//            malertDialogView.dismiss()
+//        }
+
         Toast.makeText(applicationContext,"Score anda $score", Toast.LENGTH_SHORT).show()
-        finish()
+      //  finish()
+
     }
 }

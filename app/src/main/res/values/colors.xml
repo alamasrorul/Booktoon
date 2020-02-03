@@ -3,6 +3,7 @@
     <color name="colorWhite">#ffffff</color>
     <color name="colorTrans">#4D000000</color>
     <color name="colorNoT">#33000000</color>
+    <color name="black">#000000</color>
     <color name="colorNo">#1A000000</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorAccent">#ff0000</color>
 </resources>

@@ -68,7 +68,7 @@
             <Button
                 android:id="@+id/btnA"
                 android:layout_width="match_parent"
-                android:layout_height="70dp"
+                android:layout_height="75dp"
                 android:paddingTop="5dp"
                 android:paddingBottom="5dp"
                 android:background="@drawable/button_click"
@@ -80,7 +80,7 @@
             <Button
                 android:id="@+id/btnB"
                 android:layout_width="match_parent"
-                android:layout_height="70dp"
+                android:layout_height="75dp"
                 android:paddingTop="5dp"
                 android:paddingBottom="5dp"
                 android:background="@drawable/button_click"
@@ -92,7 +92,7 @@
             <Button
                 android:id="@+id/btnC"
                 android:layout_width="match_parent"
-                android:layout_height="70dp"
+                android:layout_height="75dp"
                 android:paddingTop="5dp"
                 android:paddingBottom="5dp"
                 android:background="@drawable/button_click"
@@ -104,7 +104,7 @@
             <Button
                 android:id="@+id/btnD"
                 android:layout_width="match_parent"
-                android:layout_height="70dp"
+                android:layout_height="75dp"
                 android:paddingTop="5dp"
                 android:paddingBottom="5dp"
                 android:background="@drawable/button_click"
@@ -116,7 +116,7 @@
             <Button
                 android:id="@+id/btnE"
                 android:layout_width="match_parent"
-                android:layout_height="70dp"
+                android:layout_height="75dp"
                 android:paddingTop="5dp"
                 android:paddingBottom="5dp"
                 android:background="@drawable/button_click"
