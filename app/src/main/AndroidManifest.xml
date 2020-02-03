@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.makaryo.boooktoon">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/icon"
+        android:supportsRtl="true"
+        android:theme="@style/NoActionBar">
+        <activity android:name=".IdentitasActivity"></activity>
+        <activity android:name=".ListMateriActivity" />
+        <activity android:name=".MateriActivity" />
+        <activity android:name=".DeskripsiActivity" />
+        <activity android:name=".SoalActivity" />
+        <activity android:name=".PetunjukActivity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

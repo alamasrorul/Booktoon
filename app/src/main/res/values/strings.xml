@@ -1,0 +1,199 @@
+<resources>
+    <string name="app_name">Booktoon</string>
+    <string name="petunjuk1">Instal aplikasi booktoon melalui file aplikasi yang telah disediakan</string>
+    <string name="petunjuk2">Aplikasi ini terkhusus hanya untuk smartphone android</string>
+    <string name="petunjuk3">Setelah aplikasi terinstal jalankan  aplikasi dengan mengklik menu yang tersedia sesuai kebutuhan . Menu yang disediakan terdiri dari lima menu yaitu petunjuk penggunaan, identitas pengembang, deskripsi Produk, Materi, dan Evaluasi</string>
+    <string name="petunjuk4">Disetiap menu akan ada tombol perintah atau kembali sebagai arahan apabila anda ingin melanjutkan atau kembali ke menu semula</string>
+    <string name="petunjuk5">Pada Bagian evaluasi dipersilahkan mengklik jawaban yang dianggap benar dan mengetahui nilai setelah semua soal selesai dikerjakan</string>
+
+    <string name="deskripsi1">\t\t\Aplikasi Booktoon(Booklet Cartoon Sejarah) dengan materi "Makna Lukisan Dinding dengan Motif "Burung Enggang" Pada Gua Liang Bangkai, Kalimantan Selatan ini dikembangkan oleh Siti Ifroh Hana, Mahasiswa program Studi Pendidikan Sejarah, Universitas Negeri Malang.</string>
+    <string name="deskripsi2">\t\t\Aplikasi ini dikembangkan dengan tujuan memudahkan proses belajar sejarah khususnya pada materi makna lukisan dinding di Gua Liang Bangkai, Kalimantan Selatan sebagau hasil kebudayaan masyarakat Prasejarah.</string>
+    <string name="deskripsi3">\t\t\Aplikasi ini dikembangkan menggunakan bantuan tiga aplikasi yaitu : (1)Photoshop,untuk menggambar kartun; (2)Microsofot Power Point, untuk layout produk;  dan (3)Android Studio, untuk mengembangkan dalam bentuk aplikasi Android.</string>
+    <string name="deskripsi4">\t\t\Pada aplikasi ini memuat enam booklet yang saling berkaitan untuk mengungkap makna lukisan dinding gua. Selain itu, aplikasi ini disertai dengan evaluasi untuk mengukur ketercapaian pembelajaran.</string>
+    <string name="identitas">Siti Ifroh Hana lahir di Malang, Jawa Timur pada 22 Agustus 1998. Penulis telah menempuh pendidikan di RA nurul Ulum Poncokusumo pada tahun 2004, MI nurul Ulum pada tahun 2010, SMPN 1 Wajak pada tahun 2013, serta SMKN 1 Turen Jurusan Administrasi Perkantoran pada tahun 2016. Saat ini penulis masih aktif menempuh pendidikan sebagai mahasiswa semester akhir pada program StudiPendidikan Sejarah, Universitas Negeri Malang.</string>
+
+    <dimen name="text16sp">16sp</dimen>
+    <dimen name="textDes">24sp</dimen>
+    <dimen name="textHead">32sp</dimen>
+
+    <string-array name="soal">
+        <item>Prasejarah adalah masa sebelum manusia mengenal tulisan, sehingga yang dapat diteliti dalam prasejarah adalah….</item>
+        <item>Perhatikan uraian berikut!
+            1)	Paleometalik
+            2)	Mesolitik
+            3)	Paleolitik
+            4)	Neolitik
+            Urutan pembabakan zaman yang paling tepat adalah ….
+            </item>
+        <item>Pada masa berburu dan mengumpulkan makanan tingkat sederhana manusia hidup secara berpindah-pindah (nomaden) karena ….</item>
+        <item>Berdasarkan gambar diatas, dapat diidentifikasi mengenai karakterisitik tradisi dalam pembabakan prasejarah.  Berikut pernyataan paling tepat mengenai pembabakan prasejarah adalah </item>
+        <item>Hasil-hasil kebudayaan masyarakat prasejarah dapat diidentifikasi melalui…</item>
+        <item>Berdasarkan diagram diatas, deskripsi yang paling tepat mengenai pembabakan prasejarah adalah ….</item>
+        <item>Berikut merupakan salah satu bentuk kebudayaan masyarakat prasejarah sebagai bentuk ekspresi kesenian adalah …. </item>
+        <item>Fungsi dari lukisan dinding gua adalah sebagai bentuk ekspresi keindahan manusia prasejarah. Fungsi lain dari lukisan dinding gua diantaranya adalah …. </item>
+        <item>Berdasarkan uraian diatas, hipotesis paling tepat mengenai penelitian lukisan dinding gua di Indonesia adalah ….</item>
+        <item>Gambar diatas merupakan lukisan dinding yang ditemukan di Pangketp dengan motif …. </item>
+        <item>Salah satu gua yang menyimpan kekayaan lukisan dinding gua di Indonesia adalah Gua Liang Bangkai, posisi letak Gua Liang Bangkai adalah …. </item>
+        <item>Setiap lukisan pada dinding gua memiliki karakteristik yang berbeda-beda. Perbedaan lukisan dinding di Gua Liang Bangkai dengan gua di daerah lain adalah ….</item>
+        <item>Perhatikan uraian berikut!
+            1)	Motif Burung Enggang
+            2)	Motif Kura-kura
+            3)	Motif Kadal
+            4)	Motif Ayam hutan
+            Berikut adalah lukisan dengan motif binatang yang ditemukan di Gua Liang Bangkai adalah ….
+        </item>
+        <item>Burung Enggang dalam kepercayaan masyarakat Dayak memiliki fungsi magis tersendiri. Namun, Burung Enggang juga memiliki fungsi secara ekologis. Fungsi tersbut adalah …. </item>
+        <item>Burung Enggang merupakan hewan yang istimewa terutama bagi masyarakat Dayak. Alasan pengistimewaan Burung Enggang oleh masyarakat Dayak adalah …. </item>
+        <item>Pengungkapan makna realitas eksternal dapat melalui tiga unsur yaitu sign, referent dan interpretant. Teori tersebut disampaikan oleh Charles S. Pierce yang saat ini lebih dikenal dengan …. </item>
+        <item>Berdasarkan gambar diatas, lukisan dinding tersebut diidentifikasi sebagai lukisan dengan motif ….</item>
+        <item>Berdasarkan properti yang digunakan dalam tarian di gambar, identifikasi nama tarian yang paling tepat adalah …. </item>
+        <item>Gambar diatas adalah ornament rumah dengan motif Burung Enggang. Berdasarkan kepercayaan masyarakat Dayak siapakah yang diperbolehkan menggunakan ornament Burung Enggang ?</item>
+        <item>Keterangan:
+            1)	Diidentifikasi sebagai lukisan Burung Enggang
+            2)	Diidentifikasi sebagai Lukisan Manusia
+            Acuan:
+            1)	Tradisi Penguburan Mayat di Kalimantan dengan menggunakan peti mati berbentuk Burung Enggang
+
+            Berdasarkan keterangan tersebut, hipotesis yang dapat diambil dengan menggunakan Teori yang diungkapkan oleh Charles S. Pierce adalah …. </item>
+    </string-array>
+
+    <string-array name="textA">
+        <item>a.	Aspek kehidupan dan Keturunan </item>
+        <item>a.	3, 4, 2, dan 1</item>
+        <item>a.	Belum memiliki kecerdasan untuk menetap </item>
+        <item>a.	Kegiatan pada gambar merupakan kegiatan yang terjadi pada masa berburu dan mengumpulkan makanan tingkat sederhana </item>
+        <item>a.	Catatan-catatan prasejarah yang ditulis manusia pendukungnya </item>
+        <item>a.	Setelah manusia mampu bercocok tanam dan menjinakkan hewan manusia tidak perlu berpindah-pindah tempat lagi </item>
+        <item>a.	Cangkang kerang </item>
+        <item>a.	Bentuk pengakuan terhadap tempat tinggal </item>
+        <item>a.	Masyarakat Indonesia telah memiliki selera seni yang tinggi sejak dahulu </item>
+        <item>a.	Burung</item>
+        <item>a.	Pegunungan Meratus, Kalimantan Selatan </item>
+        <item>a.	Gua Liang Bangkai memiliki motif yang tidak jauh bebeda dengan gua prasejarah lainnya </item>
+        <item>a.	1, 2, dan 3 </item>
+        <item>a.	Menjaga kenyamanan lingkungan </item>
+        <item>a.	Dianggap sebagai nenek moyang penguasa dunia atas </item>
+        <item>a.	Teori Pierce </item>
+        <item>a.	Burung Enggang </item>
+        <item>a.	Tari Merak </item>
+        <item>a.	Rumah kepala suku </item>
+        <item>a.	Burung Enggang dipercaya sebagai kendaaraan yang digunakan untuk mengarungi kehidupan alam akhirat </item>
+    </string-array>
+
+
+    <string-array name="textB">
+        <item>b.	Tradisi dan Aspek Kehidupan </item>
+        <item>b.	3, 1, 2, dan 4 </item>
+        <item>b.	Masih belum terbentuk gua-gua </item>
+        <item>b.	Manusia melakukan perburuan dan mengelola makanan secara berkelompok pada masa paleolitik </item>
+        <item>b.	Hasil-hasil perubahan alam selama prasejarah hingga saat ini </item>
+        <item>b.	Kemampuan bercocok tanam dan menjinakkan hewan didapat karena tekanan untuk hidup menetap </item>
+        <item>b.	Sisa tulang ikan </item>
+        <item>b.	Menyimpan nilai dan representasi kehidupan </item>
+        <item>b.	Temuan pada uraian menyebabkan berbagai penelitian seni lukis gua lain </item>
+        <item>b.	Alat penagkap ikan </item>
+        <item>b.	Pegunungan Mentewe Kalimantan Selatan </item>
+        <item>b.	Letak dan posisi lukisan tidak dapat ditemukan di gua-gua prasejarah lainnya </item>
+        <item>b.	2, 3, dan 4</item>
+        <item>b.	Menjaga ekosistem sawah </item>
+        <item>b.	Burung Enggang memiliki sifat mengayomi </item>
+        <item>b.	Segitiga Pierce </item>
+        <item>b.	Ayam Hutan </item>
+        <item>b.	Tari Kupu-kupu </item>
+        <item>b.	Rumah rakyat biasa </item>
+        <item>b.	Burung Enggang merupakan mahluk mitologi yang dipercaya oleh masyarakat Dayak</item>
+    </string-array>
+
+    <string-array name="textC">
+        <item>c.	Keturunan dan Tempat tinggal</item>
+        <item>c.	3, 2, 4, dan 1</item>
+        <item>c.	Alam terbuka dirasa tempat paling aman </item>
+        <item>c.	Setelah manusia hidup menetap dan berkelompok, mereka mulai mengekspresikan seni melalui lukisan dinding</item>
+        <item>c.	Teknologi pendukung yang dihasilkan oleh manusia prasejarah</item>
+        <item>c.	Kemampuan manusia dalam menciptakan teknologi semakin baik sehingga persenjataan semakin lengkap untuk kehidupan menetap. </item>
+        <item>c.	Kapak primbas </item>
+        <item>c.	Untuk memberi tanda kepada kelompok </item>
+        <item>c.	Manusia prasejarah menciptakan berbagai teknologi sederhana </item>
+        <item>c.	Perahu </item>
+        <item>c.	Maros, Sulawesi Selatan </item>
+        <item>c.	Lukisan dinding pada Gua Liang Bangkai memiliki fungsi yang jelas dibandingkan dengan gua prasejarah lainnya </item>
+        <item>c.	1, 3, dan 4 </item>
+        <item>c.	Menjaga ekosistem hutan </item>
+        <item>c.	Burung Enggang merupakan hewan tercantik di Kalimantan </item>
+        <item>c.	Segitiga Charles </item>
+        <item>c.	Burung Cendrawasih </item>
+        <item>c.	Tari Burung Enggang </item>
+        <item>c.	Gedung-gedung sacral </item>
+        <item>c.	Burung Enggang mengayomi manusia dari lahir kehidupan di bumi hingga kembali ke akhirat </item>
+    </string-array>
+
+    <string-array name="textD">
+        <item>d.	Tempat tinggal dan Tradisi </item>
+        <item>d.	3, 1, 4, dan 2 </item>
+        <item>d.	Menyesuaikan dengan ketersediaan mekanan </item>
+        <item>d.	Tradisi prasejarah pada gambar masing-masing menentukan masa pembabakan yang berbeda </item>
+        <item>d.	Kecerdasan volume otak manusia prasejarah </item>
+        <item>d.	Menusia bercocok tanam karena tidak lagi menemukan sumber daya makanan secara langsung di alam </item>
+        <item>d.	Gua tempat tinggal </item>
+        <item>d.	Sebagai upaya mengembangkan diri </item>
+        <item>d.	Manusia prasejarah menggambarkan aktivitasnya dalam sebuah lukisan dinding gua </item>
+        <item>d.	Babi hutan </item>
+        <item>d.	Pangkep, Sulawesi Selatan </item>
+        <item>d.	Pewarnaan lukisan dinding pada Gua Liang Bangkai berbeda dengan gua-gua prasejarah lainnya </item>
+        <item>d.	1, 2, dan 4 </item>
+        <item>d.	Menjaga ekosistem laut </item>
+        <item>d.	Harga dari Burung Enggang yang sangat mahal </item>
+        <item>d.	Teori Charles </item>
+        <item>d.	Burung Kakatua </item>
+        <item>d.	Tari Dayak </item>
+        <item>d.	Tempat upacara </item>
+        <item>d.	Burung Enggang menjaga keseimbangan alam di bumi dan menjaga manusia </item>
+    </string-array>
+
+    <string-array name="textE">
+        <item>e.	Tradisi dan Keturunan </item>
+        <item>e.	3, 4, 2, dan 1 </item>
+        <item>e.	Memudahkan mencari kelompoknya</item>
+        <item>e.	Kegiatan pada gambar merupakan kegiatan yang terjadi pada masa berburu dan mengumpulkan makanan tingkat lanjut</item>
+        <item>e.	Makanan yang dikonsumsi manusia prasejarah </item>
+        <item>e.	Kehidupan menetap manusia dilaukan untuk menghindari perebutan makanan antar kelompok manusia prasejarah</item>
+        <item>e.	Lukisan dinding gua </item>
+        <item>e.	Sebagai alat legitimasi kepemimpinan </item>
+        <item>e.	Manusia prasejarah meninggalkan jejak pada kelompoknya </item>
+        <item>e.	Alat trasnportasi </item>
+        <item>e.	Liang Ulin, Kalimantan Selatan </item>
+        <item>e.	Teknik lukisan pada Gua Liang Bangkai dapat diidentifikasi dibandingkan dengan gua-gua prasejarah lainnya</item>
+        <item>e.	Semua benar </item>
+        <item>e.	Mencegak kekeringan hutan </item>
+        <item>e.	Burung Enggang hanya dipelihara oleh orang-orang berpengaruh </item>
+        <item>e.	Teori Realitas </item>
+        <item>e.	Burung Hantu </item>
+        <item>e.	Tari Serumpai </item>
+        <item>e.	Rumah kaum bangsawan </item>
+        <item>e.	Burung Enggang sebagai dewa alam atas yang menjaga kehidupan manusia </item>
+    </string-array>
+
+    <string-array name="kunci">
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+        <item>E</item>
+        <item>C</item>
+        <item>A</item>
+        <item>E</item>
+        <item>B</item>
+        <item>D</item>
+        <item>D</item>
+        <item>A</item>
+        <item>D</item>
+        <item>C</item>
+        <item>C</item>
+        <item>B</item>
+        <item>B</item>
+        <item>A</item>
+        <item>C</item>
+        <item>E</item>
+        <item>A</item>
+    </string-array>
+
+</resources>
