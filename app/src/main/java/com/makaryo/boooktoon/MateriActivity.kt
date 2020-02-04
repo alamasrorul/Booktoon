@@ -1,15 +1,13 @@
 package com.makaryo.boooktoon
 
+import android.R
 import android.content.Context
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
-import com.viewpagerindicator.CirclePageIndicator
+import com.github.barteksc.pdfviewer.PDFView
+import com.github.barteksc.pdfviewer.util.FitPolicy
 import kotlinx.android.synthetic.main.activity_materi.*
-import kotlin.collections.ArrayList
 
 
 class MateriActivity : AppCompatActivity() {
@@ -65,103 +63,226 @@ class MateriActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_materi)
+        setContentView(com.makaryo.boooktoon.R.layout.activity_materi)
+
 
 //        try {
             context = this
-            viewPager = findViewById(R.id.pager)
+            //viewPager = findViewById(R.id.pager)
         val data = intent.getStringExtra("data")
         println("data : " + data)
 
         if(data == "1")  {
 
-
-                    sliderItems = ArrayList()
-                    sliderItems.add(MateriModel(1, R.drawable.slide4))
-                    sliderItems.add(MateriModel(2, R.drawable.slide5))
-                    sliderItems.add(MateriModel(3, R.drawable.slide6))
-                    sliderItems.add(MateriModel(4, R.drawable.slide7))
-                    val adapter = SlideImageAdapter(context, sliderItems as ArrayList<MateriModel>)
-                    viewPager.adapter = adapter
 //
+//                    sliderItems = ArrayList()
+//                    sliderItems.add(MateriModel(1, R.drawable.slide4))
+//                    sliderItems.add(MateriModel(2, R.drawable.slide5))
+//                    sliderItems.add(MateriModel(3, R.drawable.slide6))
+//                    sliderItems.add(MateriModel(4, R.drawable.slide7))
+//                    val adapter = SlideImageAdapter(context, sliderItems as ArrayList<MateriModel>)
+//                    viewPager.adapter = adapter
+
+
+
+            //PDF View
+
+            pdf_view.fromAsset("materi1.pdf")
+                .enableSwipe(true) // allows to block changing pages using swipe
+                .swipeHorizontal(true)
+                .enableDoubletap(true)
+                .defaultPage(0)
+                .enableAnnotationRendering(false) // render annotations (such as comments, colors or forms)
+                .password(null)
+                .scrollHandle(null)
+                .enableAntialiasing(true) // improve rendering a little bit on low-res screens
+// spacing between pages in dp. To define spacing color, set view background
+                .spacing(0)
+                .pageFitPolicy(FitPolicy.WIDTH)
+                .load()
 
 
                }
    if(data == "2") {
-                    sliderItems = ArrayList()
-                    sliderItems.add(MateriModel(5, R.drawable.slide8))
-                    sliderItems.add(MateriModel(6, R.drawable.slide9))
-                    sliderItems.add(MateriModel(7, R.drawable.slide10))
-                    sliderItems.add(MateriModel(8, R.drawable.slide11))
-                    sliderItems.add(MateriModel(9, R.drawable.slide12))
-                    sliderItems.add(MateriModel(10, R.drawable.slide13))
-                    sliderItems.add(MateriModel(11, R.drawable.slide14))
-                    val adapter = SlideImageAdapter(context, sliderItems as ArrayList<MateriModel>)
-                   viewPager.adapter = adapter
+//                    sliderItems = ArrayList()
+//                    sliderItems.add(MateriModel(5, R.drawable.slide8))
+//                    sliderItems.add(MateriModel(6, R.drawable.slide9))
+//                    sliderItems.add(MateriModel(7, R.drawable.slide10))
+//                    sliderItems.add(MateriModel(8, R.drawable.slide11))
+//                    sliderItems.add(MateriModel(9, R.drawable.slide12))
+//                    sliderItems.add(MateriModel(10, R.drawable.slide13))
+//                    sliderItems.add(MateriModel(11, R.drawable.slide14))
+//                    val adapter = SlideImageAdapter(context, sliderItems as ArrayList<MateriModel>)
+//                   viewPager.adapter = adapter
+       //PDF View
+
+       pdf_view.fromAsset("materi2.pdf")
+           .enableSwipe(true) // allows to block changing pages using swipe
+           .swipeHorizontal(false)
+           .enableDoubletap(true)
+           .defaultPage(0)
+           .enableAnnotationRendering(false) // render annotations (such as comments, colors or forms)
+           .password(null)
+           .scrollHandle(null)
+           .enableAntialiasing(true) // improve rendering a little bit on low-res screens
+// spacing between pages in dp. To define spacing color, set view background
+           .spacing(0)
+           .pageFitPolicy(FitPolicy.WIDTH)
+           .load()
 }
 //
             if(data == "3") {
 //else {
-                  sliderItems = ArrayList()
-                sliderItems.add(MateriModel(12, R.drawable.slide15))
-                sliderItems.add(MateriModel(13, R.drawable.slide16))
-                sliderItems.add(MateriModel(14, R.drawable.slide17))
+//                  sliderItems = ArrayList()
+//                sliderItems.add(MateriModel(12, R.drawable.slide15))
+//                sliderItems.add(MateriModel(13, R.drawable.slide16))
+//                sliderItems.add(MateriModel(14, R.drawable.slide17))
+//
+//                    val adapter = SlideImageAdapter(context, sliderItems as ArrayList<MateriModel>)
+//                 viewPager.adapter = adapter
+                //PDF View
 
-                    val adapter = SlideImageAdapter(context, sliderItems as ArrayList<MateriModel>)
-                 viewPager.adapter = adapter
+                pdf_view.fromAsset("materi3.pdf")
+                    .enableSwipe(true) // allows to block changing pages using swipe
+                    .swipeHorizontal(true)
+                    .enableDoubletap(true)
+                    .defaultPage(0)
+                    .enableAnnotationRendering(false) // render annotations (such as comments, colors or forms)
+                    .password(null)
+                    .scrollHandle(null)
+                    .enableAntialiasing(true) // improve rendering a little bit on low-res screens
+// spacing between pages in dp. To define spacing color, set view background
+                    .spacing(0)
+                    .pageFitPolicy(FitPolicy.WIDTH)
+                    .load()
                 }
             if(data == "4") {
-                    sliderItems = ArrayList()
-                sliderItems.add(MateriModel(15, R.drawable.slide18))
-                sliderItems.add(MateriModel(16, R.drawable.slide19))
-                sliderItems.add(MateriModel(17, R.drawable.slide20))
-                sliderItems.add(MateriModel(18, R.drawable.slide21))
-                sliderItems.add(MateriModel(19, R.drawable.slide22))
+//                    sliderItems = ArrayList()
+//                sliderItems.add(MateriModel(15, R.drawable.slide18))
+//                sliderItems.add(MateriModel(16, R.drawable.slide19))
+//                sliderItems.add(MateriModel(17, R.drawable.slide20))
+//                sliderItems.add(MateriModel(18, R.drawable.slide21))
+//                sliderItems.add(MateriModel(19, R.drawable.slide22))
+//
+//                    val adapter = SlideImageAdapter(context, sliderItems as ArrayList<MateriModel>)
+//                    viewPager.adapter = adapter
+                //PDF View
 
-                    val adapter = SlideImageAdapter(context, sliderItems as ArrayList<MateriModel>)
-                    viewPager.adapter = adapter
+                pdf_view.fromAsset("materi4.pdf")
+                    .enableSwipe(true) // allows to block changing pages using swipe
+                    .swipeHorizontal(true)
+                    .enableDoubletap(true)
+                    .defaultPage(0)
+                    .enableAnnotationRendering(false) // render annotations (such as comments, colors or forms)
+                    .password(null)
+                    .scrollHandle(null)
+                    .enableAntialiasing(true) // improve rendering a little bit on low-res screens
+// spacing between pages in dp. To define spacing color, set view background
+                    .spacing(0)
+                    .pageFitPolicy(FitPolicy.WIDTH)
+                    .load()
 }
             if(data == "5") {
-                  sliderItems = ArrayList()
-                sliderItems.add(MateriModel(20, R.drawable.slide23))
-                sliderItems.add(MateriModel(21, R.drawable.slide24))
-                sliderItems.add(MateriModel(22, R.drawable.slide25))
-                sliderItems.add(MateriModel(23, R.drawable.slide26))
-                sliderItems.add(MateriModel(24, R.drawable.slide27))
-                sliderItems.add(MateriModel(25, R.drawable.slide28))
-                sliderItems.add(MateriModel(26, R.drawable.slide29))
-                  val adapter = SlideImageAdapter(context, sliderItems as ArrayList<MateriModel>)
-                    viewPager.adapter = adapter
-}
-            if(data == "6"){
-                   sliderItems = ArrayList()
-                sliderItems.add(MateriModel(27, R.drawable.slide31))
-                sliderItems.add(MateriModel(28, R.drawable.slide32))
-                sliderItems.add(MateriModel(29, R.drawable.slide33))
-                sliderItems.add(MateriModel(30, R.drawable.slide34))
-                sliderItems.add(MateriModel(31, R.drawable.slide35))
-                sliderItems.add(MateriModel(32, R.drawable.slide36))
+//                  sliderItems = ArrayList()
+//                sliderItems.add(MateriModel(20, R.drawable.slide23))
+//                sliderItems.add(MateriModel(21, R.drawable.slide24))
+//                sliderItems.add(MateriModel(22, R.drawable.slide25))
+//                sliderItems.add(MateriModel(23, R.drawable.slide26))
+//                sliderItems.add(MateriModel(24, R.drawable.slide27))
+//                sliderItems.add(MateriModel(25, R.drawable.slide28))
+//                sliderItems.add(MateriModel(26, R.drawable.slide29))
+//                  val adapter = SlideImageAdapter(context, sliderItems as ArrayList<MateriModel>)
+//                    viewPager.adapter = adapter
+//PDF View
 
-                    val adapter = SlideImageAdapter(context, sliderItems as ArrayList<MateriModel>)
-                    viewPager.adapter = adapter
+                pdf_view.fromAsset("materi5.pdf")
+                    .enableSwipe(true) // allows to block changing pages using swipe
+                    .swipeHorizontal(true)
+                    .enableDoubletap(true)
+                    .defaultPage(0)
+                    .enableAnnotationRendering(false) // render annotations (such as comments, colors or forms)
+                    .password(null)
+                    .scrollHandle(null)
+                    .enableAntialiasing(true) // improve rendering a little bit on low-res screens
+// spacing between pages in dp. To define spacing color, set view background
+                    .spacing(0)
+                    .pageFitPolicy(FitPolicy.WIDTH)
+                    .load()
+            }
+            if(data == "6"){
+//                   sliderItems = ArrayList()
+//                sliderItems.add(MateriModel(27, R.drawable.slide31))
+//                sliderItems.add(MateriModel(28, R.drawable.slide32))
+//                sliderItems.add(MateriModel(29, R.drawable.slide33))
+//                sliderItems.add(MateriModel(30, R.drawable.slide34))
+//                sliderItems.add(MateriModel(31, R.drawable.slide35))
+//                sliderItems.add(MateriModel(32, R.drawable.slide36))
+//
+//                    val adapter = SlideImageAdapter(context, sliderItems as ArrayList<MateriModel>)
+//                    viewPager.adapter = adapter
+                //PDF View
+
+                pdf_view.fromAsset("materi6.pdf")
+                    .enableSwipe(true) // allows to block changing pages using swipe
+                    .swipeHorizontal(true)
+                    .enableDoubletap(true)
+                    .defaultPage(0)
+                    .enableAnnotationRendering(false) // render annotations (such as comments, colors or forms)
+                    .password(null)
+                    .scrollHandle(null)
+                    .enableAntialiasing(true) // improve rendering a little bit on low-res screens
+// spacing between pages in dp. To define spacing color, set view background
+                    .spacing(0)
+                    .pageFitPolicy(FitPolicy.WIDTH)
+                    .load()
 }
         if(data == "7") {
-                    sliderItems = ArrayList()
-                sliderItems.add(MateriModel(33, R.drawable.slide37))
-                sliderItems.add(MateriModel(34, R.drawable.slide38))
-                sliderItems.add(MateriModel(35, R.drawable.slide39))
-                sliderItems.add(MateriModel(36, R.drawable.slide40))
+//                    sliderItems = ArrayList()
+//                sliderItems.add(MateriModel(33, R.drawable.slide37))
+//                sliderItems.add(MateriModel(34, R.drawable.slide38))
+//                sliderItems.add(MateriModel(35, R.drawable.slide39))
+//                sliderItems.add(MateriModel(36, R.drawable.slide40))
+//
+// val adapter = SlideImageAdapter(context, sliderItems as ArrayList<MateriModel>)
+//viewPager.adapter = adapter
+            //PDF View
 
- val adapter = SlideImageAdapter(context, sliderItems as ArrayList<MateriModel>)
-viewPager.adapter = adapter
+            pdf_view.fromAsset("materi7.pdf")
+                .enableSwipe(true) // allows to block changing pages using swipe
+                .swipeHorizontal(true)
+                .enableDoubletap(true)
+                .defaultPage(0)
+                .enableAnnotationRendering(false) // render annotations (such as comments, colors or forms)
+                .password(null)
+                .scrollHandle(null)
+                .enableAntialiasing(true) // improve rendering a little bit on low-res screens
+// spacing between pages in dp. To define spacing color, set view background
+                .spacing(0)
+                .pageFitPolicy(FitPolicy.WIDTH)
+                .load()
     }
             if(data == "8") {
-                    sliderItems = ArrayList()
-                sliderItems.add(MateriModel(37, R.drawable.slide41))
-                sliderItems.add(MateriModel(38, R.drawable.slide42))
-                sliderItems.add(MateriModel(39, R.drawable.slide43))
-                val adapter = SlideImageAdapter(context, sliderItems as ArrayList<MateriModel>)
-                viewPager.adapter = adapter
+//                    sliderItems = ArrayList()
+//                sliderItems.add(MateriModel(37, R.drawable.slide41))
+//                sliderItems.add(MateriModel(38, R.drawable.slide42))
+//                sliderItems.add(MateriModel(39, R.drawable.slide43))
+//                val adapter = SlideImageAdapter(context, sliderItems as ArrayList<MateriModel>)
+//                viewPager.adapter = adapter
+                //PDF View
+
+                pdf_view.fromAsset("materi8.pdf")
+                    .enableSwipe(true) // allows to block changing pages using swipe
+                    .swipeHorizontal(true)
+                    .enableDoubletap(true)
+                    .defaultPage(0)
+                    .enableAnnotationRendering(false) // render annotations (such as comments, colors or forms)
+                    .password(null)
+                    .scrollHandle(null)
+                    .enableAntialiasing(true) // improve rendering a little bit on low-res screens
+// spacing between pages in dp. To define spacing color, set view background
+                    .spacing(0)
+                    .pageFitPolicy(FitPolicy.WIDTH)
+                    .load()
 
             }
 //        if (data=="1"){

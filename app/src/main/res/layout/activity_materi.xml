@@ -8,53 +8,53 @@
 
 
     <ImageView
+
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:scaleType="fitXY"
+        android:src="@mipmap/background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:src="@mipmap/background"
-        android:scaleType="fitXY"
-        />
-<!--    <TextView-->
-<!--        android:id="@+id/Header"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        app:layout_constraintRight_toRightOf="parent"-->
-<!--        app:layout_constraintLeft_toLeftOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        android:layout_marginBottom="50dp"-->
-<!--        app:layout_constraintBottom_toTopOf="@id/guideline"-->
-<!--        android:text="@string/app_name"-->
-<!--        android:textSize="@dimen/textHead"-->
-<!--        android:textColor="@color/colorWhite"-->
-<!--        />-->
-<!--    <TextView-->
-<!--        android:id="@+id/Ket"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        app:layout_constraintTop_toBottomOf="@id/Header"-->
-<!--        app:layout_constraintRight_toRightOf="parent"-->
-<!--        app:layout_constraintLeft_toLeftOf="parent"-->
-<!--        android:layout_marginTop="8dp"-->
-<!--        android:text="(Materi)"-->
-<!--        android:textSize="@dimen/textDes"-->
-<!--        android:textColor="@color/colorWhite"-->
-<!--        />-->
+        app:layout_constraintTop_toTopOf="parent" />
+    <!--    <TextView-->
+    <!--        android:id="@+id/Header"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        app:layout_constraintRight_toRightOf="parent"-->
+    <!--        app:layout_constraintLeft_toLeftOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        android:layout_marginBottom="50dp"-->
+    <!--        app:layout_constraintBottom_toTopOf="@id/guideline"-->
+    <!--        android:text="@string/app_name"-->
+    <!--        android:textSize="@dimen/textHead"-->
+    <!--        android:textColor="@color/colorWhite"-->
+    <!--        />-->
+    <!--    <TextView-->
+    <!--        android:id="@+id/Ket"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/Header"-->
+    <!--        app:layout_constraintRight_toRightOf="parent"-->
+    <!--        app:layout_constraintLeft_toLeftOf="parent"-->
+    <!--        android:layout_marginTop="8dp"-->
+    <!--        android:text="(Materi)"-->
+    <!--        android:textSize="@dimen/textDes"-->
+    <!--        android:textColor="@color/colorWhite"-->
+    <!--        />-->
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
         android:layout_width="1dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.02"/>
+        app:layout_constraintGuide_percent="0.05" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline4"
         android:layout_width="1dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.98"/>
+        app:layout_constraintGuide_percent="0.95" />
 
 
     <androidx.constraintlayout.widget.Guideline
@@ -62,42 +62,50 @@
         android:layout_width="1dp"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.04"/>
+        app:layout_constraintGuide_percent="0.04" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"
         android:layout_width="1dp"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.94"/>
-    <androidx.cardview.widget.CardView
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintTop_toBottomOf="@id/guideline"
-        app:layout_constraintLeft_toRightOf="@id/guideline2"
-        app:layout_constraintRight_toLeftOf="@id/guideline3"
-        app:layout_constraintBottom_toTopOf="@id/guideline4"
-        app:cardBackgroundColor="@color/colorTrans">
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/pager"
+        app:layout_constraintGuide_percent="0.94" />
+
+<!--    <androidx.cardview.widget.CardView-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        app:cardBackgroundColor="@color/colorTrans"-->
+<!--        app:layout_constraintBottom_toTopOf="@id/guideline4"-->
+<!--        app:layout_constraintLeft_toRightOf="@id/guideline2"-->
+<!--        app:layout_constraintRight_toLeftOf="@id/guideline3"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/guideline">-->
+<!--        &lt;!&ndash;    <androidx.viewpager.widget.ViewPager&ndash;&gt;-->
+<!--        &lt;!&ndash;        android:id="@+id/pager"&ndash;&gt;-->
+<!--        &lt;!&ndash;        android:layout_width="match_parent"&ndash;&gt;-->
+<!--        &lt;!&ndash;        android:layout_height="match_parent"&ndash;&gt;-->
+
+<!--        &lt;!&ndash;        >&ndash;&gt;-->
+<!--        &lt;!&ndash;        <include layout="@layout/slideimage_layout" />&ndash;&gt;-->
+
+
+<!--        &lt;!&ndash;    </androidx.viewpager.widget.ViewPager>&ndash;&gt;-->
+<!--        -->
+
+<!--    </androidx.cardview.widget.CardView>-->
+    <com.github.barteksc.pdfviewer.PDFView
+        android:id="@+id/pdf_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="match_parent" />
 
-        >
-        <include layout="@layout/slideimage_layout" />
-
-
-    </androidx.viewpager.widget.ViewPager>
-    </androidx.cardview.widget.CardView>
     <com.viewpagerindicator.CirclePageIndicator
         android:id="@+id/indicator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/guideline4"
-        app:layout_constraintLeft_toRightOf="@id/guideline2"
-        app:layout_constraintRight_toLeftOf="@id/guideline3"
         app:centered="true"
         app:fillColor="@color/colorWhite"
+        app:layout_constraintLeft_toRightOf="@id/guideline2"
+        app:layout_constraintRight_toLeftOf="@id/guideline3"
+        app:layout_constraintTop_toBottomOf="@id/guideline4"
         app:pageColor="@color/colorAccent"
-        app:snap="false"/>
+        app:snap="false" />
 </androidx.constraintlayout.widget.ConstraintLayout>
