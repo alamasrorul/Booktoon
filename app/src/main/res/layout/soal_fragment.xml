@@ -57,9 +57,10 @@
             <TextView
                 android:id="@+id/txtSoal"
                 android:layout_width="wrap_content"
+                android:paddingRight="5dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="Siapa nama ayah dari tetangga saya?"
+                android:text="Siapa nama ayah dari tetangga saya?sadjkaskdaasdasdsdasdasdasdasdshkdashdhsadhashdhasdhkajsdjsad"
                 android:textColor="@color/colorWhite"
                 android:textSize="16dp"
                 android:layout_marginTop="8dp"

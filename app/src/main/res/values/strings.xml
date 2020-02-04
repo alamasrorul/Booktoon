@@ -4,11 +4,11 @@
     <string name="petunjuk2">Aplikasi ini terkhusus hanya untuk smartphone android</string>
     <string name="petunjuk3">Setelah aplikasi terinstal jalankan  aplikasi dengan mengklik menu yang tersedia sesuai kebutuhan . Menu yang disediakan terdiri dari lima menu yaitu petunjuk penggunaan, identitas pengembang, deskripsi Produk, Materi, dan Evaluasi</string>
     <string name="petunjuk4">Disetiap menu akan ada tombol perintah atau kembali sebagai arahan apabila anda ingin melanjutkan atau kembali ke menu semula</string>
-    <string name="petunjuk5">Pada Bagian evaluasi dipersilahkan mengklik jawaban yang dianggap benar dan mengetahui nilai setelah semua soal selesai dikerjakan</string>
+    <string name="petunjuk5">Pada Bagian evaluasi dipersilahkan menekan jawaban yang dianggap benar dan mengetahui nilai setelah semua soal selesai dikerjakan</string>
 
     <string name="deskripsi1">\t\t\Aplikasi Booktoon(Booklet Cartoon Sejarah) dengan materi "Makna Lukisan Dinding dengan Motif "Burung Enggang" Pada Gua Liang Bangkai, Kalimantan Selatan ini dikembangkan oleh Siti Ifroh Hana, Mahasiswa program Studi Pendidikan Sejarah, Universitas Negeri Malang.</string>
-    <string name="deskripsi2">\t\t\Aplikasi ini dikembangkan dengan tujuan memudahkan proses belajar sejarah khususnya pada materi makna lukisan dinding di Gua Liang Bangkai, Kalimantan Selatan sebagau hasil kebudayaan masyarakat Prasejarah.</string>
-    <string name="deskripsi3">\t\t\Aplikasi ini dikembangkan menggunakan bantuan tiga aplikasi yaitu : (1)Photoshop,untuk menggambar kartun; (2)Microsofot Power Point, untuk layout produk;  dan (3)Android Studio, untuk mengembangkan dalam bentuk aplikasi Android.</string>
+    <string name="deskripsi2">\t\t\Aplikasi ini dikembangkan dengan tujuan memudahkan proses belajar sejarah khususnya pada materi makna lukisan dinding di Gua Liang Bangkai, Kalimantan Selatan sebagai hasil kebudayaan masyarakat Prasejarah.</string>
+    <string name="deskripsi3">\t\t\Aplikasi ini dikembangkan menggunakan bantuan tiga aplikasi yaitu : (1)Photoshop,untuk menggambar kartun; (2)Microsoft Power Point, untuk layout produk;  dan (3)Android Studio, untuk mengembangkan dalam bentuk aplikasi Android.</string>
     <string name="deskripsi4">\t\t\Pada aplikasi ini memuat enam booklet yang saling berkaitan untuk mengungkap makna lukisan dinding gua. Selain itu, aplikasi ini disertai dengan evaluasi untuk mengukur ketercapaian pembelajaran.</string>
     <string name="identitas">Siti Ifroh Hana lahir di Malang, Jawa Timur pada 22 Agustus 1998. Penulis telah menempuh pendidikan di RA nurul Ulum Poncokusumo pada tahun 2004, MI nurul Ulum pada tahun 2010, SMPN 1 Wajak pada tahun 2013, serta SMKN 1 Turen Jurusan Administrasi Perkantoran pada tahun 2016. Saat ini penulis masih aktif menempuh pendidikan sebagai mahasiswa semester akhir pada program StudiPendidikan Sejarah, Universitas Negeri Malang.</string>
 
@@ -18,11 +18,11 @@
 
     <string-array name="soal">
         <item>Prasejarah adalah masa sebelum manusia mengenal tulisan, sehingga yang dapat diteliti dalam prasejarah adalah….</item>
-        <item>Perhatikan uraian berikut!
-            1)	Paleometalik
-            2)	Mesolitik
-            3)	Paleolitik
-            4)	Neolitik
+        <item>Perhatikan uraian berikut! \n\n
+            1)	Paleometalik\n
+            2)	Mesolitik\n
+            3)	Paleolitik\n
+            4)	Neolitik\n\n
             Urutan pembabakan zaman yang paling tepat adalah ….
             </item>
         <item>Pada masa berburu dan mengumpulkan makanan tingkat sederhana manusia hidup secara berpindah-pindah (nomaden) karena ….</item>
@@ -35,11 +35,11 @@
         <item>Gambar diatas merupakan lukisan dinding yang ditemukan di Pangketp dengan motif …. </item>
         <item>Salah satu gua yang menyimpan kekayaan lukisan dinding gua di Indonesia adalah Gua Liang Bangkai, posisi letak Gua Liang Bangkai adalah …. </item>
         <item>Setiap lukisan pada dinding gua memiliki karakteristik yang berbeda-beda. Perbedaan lukisan dinding di Gua Liang Bangkai dengan gua di daerah lain adalah ….</item>
-        <item>Perhatikan uraian berikut!
-            1)	Motif Burung Enggang
-            2)	Motif Kura-kura
-            3)	Motif Kadal
-            4)	Motif Ayam hutan
+        <item>Perhatikan uraian berikut!\n\n
+            1)	Motif Burung Enggang\n
+            2)	Motif Kura-kura\n
+            3)	Motif Kadal\n
+            4)	Motif Ayam hutan\n\n
             Berikut adalah lukisan dengan motif binatang yang ditemukan di Gua Liang Bangkai adalah ….
         </item>
         <item>Burung Enggang dalam kepercayaan masyarakat Dayak memiliki fungsi magis tersendiri. Namun, Burung Enggang juga memiliki fungsi secara ekologis. Fungsi tersbut adalah …. </item>
@@ -48,11 +48,11 @@
         <item>Berdasarkan gambar diatas, lukisan dinding tersebut diidentifikasi sebagai lukisan dengan motif ….</item>
         <item>Berdasarkan properti yang digunakan dalam tarian di gambar, identifikasi nama tarian yang paling tepat adalah …. </item>
         <item>Gambar diatas adalah ornament rumah dengan motif Burung Enggang. Berdasarkan kepercayaan masyarakat Dayak siapakah yang diperbolehkan menggunakan ornament Burung Enggang ?</item>
-        <item>Keterangan:
-            1)	Diidentifikasi sebagai lukisan Burung Enggang
-            2)	Diidentifikasi sebagai Lukisan Manusia
-            Acuan:
-            1)	Tradisi Penguburan Mayat di Kalimantan dengan menggunakan peti mati berbentuk Burung Enggang
+        <item>Keterangan:\n\n
+            1)	Diidentifikasi sebagai lukisan Burung Enggang\n
+            2)	Diidentifikasi sebagai Lukisan Manusia\n\n
+            Acuan:\n\n
+            1)	Tradisi Penguburan Mayat di Kalimantan dengan menggunakan peti mati berbentuk Burung Enggang\n\n
 
             Berdasarkan keterangan tersebut, hipotesis yang dapat diambil dengan menggunakan Teori yang diungkapkan oleh Charles S. Pierce adalah …. </item>
     </string-array>

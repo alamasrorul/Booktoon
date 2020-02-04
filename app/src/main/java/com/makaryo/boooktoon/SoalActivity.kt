@@ -9,10 +9,7 @@ import java.nio.file.Files.size
 import androidx.core.app.ComponentActivity.ExtraData
 import androidx.core.content.ContextCompat.getSystemService
 import android.icu.lang.UCharacter.GraphemeClusterBreak.T
-import android.view.LayoutInflater
-import android.view.Menu
-import android.view.MenuItem
-import android.view.View
+import android.view.*
 import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import kotlinx.android.synthetic.main.score.*
@@ -54,6 +51,10 @@ class SoalActivity : AppCompatActivity() {
 //    private var btChild2E:Button? = null
 
     private var listEval: ArrayList<Evaluasi>? = null
+
+    private var mScaleGestureDetector: ScaleGestureDetector? = null
+    private var mScaleFactor = 1.0f
+    private var imageView: ImageView? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -409,7 +410,6 @@ class SoalActivity : AppCompatActivity() {
 //        btChild2E = findViewById<Button>(R.id.btnE2)
 //    }
 
-
     private fun prepareQuest(curr: Evaluasi) {
         if (currNo % 2 == 0) {
             // no genap -> child1
@@ -419,6 +419,8 @@ class SoalActivity : AppCompatActivity() {
             if (currNo == 3){
                 imagesoal!!.setImageResource(R.mipmap.soal_4a)
             image2soal!!.setImageResource(R.mipmap.soal_4b)
+
+
             }
             else if (currNo == 5){
                 imagesoal!!.setImageResource(R.mipmap.soal_6)
@@ -467,6 +469,7 @@ class SoalActivity : AppCompatActivity() {
             if (currNo == 3){
                 imagesoal2!!.setImageResource(R.mipmap.soal_4a)
                 image2soal2!!.setImageResource(R.mipmap.soal_4b)
+
             }
             else if (currNo == 5){
                 imagesoal2!!.setImageResource(R.mipmap.soal_6)
