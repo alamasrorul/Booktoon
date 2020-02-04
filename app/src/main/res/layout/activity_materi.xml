@@ -17,44 +17,44 @@
         android:src="@mipmap/background"
         android:scaleType="fitXY"
         />
-    <TextView
-        android:id="@+id/Header"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginBottom="50dp"
-        app:layout_constraintBottom_toTopOf="@id/guideline"
-        android:text="@string/app_name"
-        android:textSize="@dimen/textHead"
-        android:textColor="@color/colorWhite"
-        />
-    <TextView
-        android:id="@+id/Ket"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/Header"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginTop="8dp"
-        android:text="(Materi)"
-        android:textSize="@dimen/textDes"
-        android:textColor="@color/colorWhite"
-        />
+<!--    <TextView-->
+<!--        android:id="@+id/Header"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintRight_toRightOf="parent"-->
+<!--        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        android:layout_marginBottom="50dp"-->
+<!--        app:layout_constraintBottom_toTopOf="@id/guideline"-->
+<!--        android:text="@string/app_name"-->
+<!--        android:textSize="@dimen/textHead"-->
+<!--        android:textColor="@color/colorWhite"-->
+<!--        />-->
+<!--    <TextView-->
+<!--        android:id="@+id/Ket"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/Header"-->
+<!--        app:layout_constraintRight_toRightOf="parent"-->
+<!--        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:text="(Materi)"-->
+<!--        android:textSize="@dimen/textDes"-->
+<!--        android:textColor="@color/colorWhite"-->
+<!--        />-->
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
         android:layout_width="1dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.25"/>
+        app:layout_constraintGuide_percent="0.02"/>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline4"
         android:layout_width="1dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.97"/>
+        app:layout_constraintGuide_percent="0.98"/>
 
 
     <androidx.constraintlayout.widget.Guideline
@@ -81,8 +81,12 @@
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/pager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+
+        >
         <include layout="@layout/slideimage_layout" />
+
+
     </androidx.viewpager.widget.ViewPager>
     </androidx.cardview.widget.CardView>
     <com.viewpagerindicator.CirclePageIndicator

@@ -3,6 +3,13 @@ package com.makaryo.boooktoon
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.R.*
+import android.animation.Animator
+import android.animation.AnimatorListenerAdapter
+import android.animation.AnimatorSet
+import android.animation.ObjectAnimator
+import android.graphics.Point
+import android.graphics.Rect
+import android.graphics.RectF
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import android.text.Html
 import java.nio.file.Files.size
@@ -10,8 +17,10 @@ import androidx.core.app.ComponentActivity.ExtraData
 import androidx.core.content.ContextCompat.getSystemService
 import android.icu.lang.UCharacter.GraphemeClusterBreak.T
 import android.view.*
+import android.view.animation.DecelerateInterpolator
 import android.widget.*
 import androidx.appcompat.app.AlertDialog
+import androidx.fragment.app.FragmentActivity
 import kotlinx.android.synthetic.main.score.*
 import kotlinx.android.synthetic.main.soal_activity.*
 import kotlinx.android.synthetic.main.soal_fragment.*
@@ -21,7 +30,7 @@ import kotlinx.android.synthetic.main.soal_fragment2.*
 class SoalActivity : AppCompatActivity() {
 
     private var currNo: Int = 0
-    private var score:Int = 0
+    private var score: Int = 0
 //
 //    private var vfParent: ViewFlipper? = null
 //    private var bsbPembahasan: BottomSheetBehavior<*>? = null
@@ -70,10 +79,9 @@ class SoalActivity : AppCompatActivity() {
                     showResult()
                     return
                 }
-                if (currNo % 2 == 0){
+                if (currNo % 2 == 0) {
                     sc1!!.fullScroll(ScrollView.FOCUS_UP)
-                }
-                else{
+                } else {
                     sc2!!.fullScroll(ScrollView.FOCUS_UP)
                 }
                 prepareQuest(listEval!![++currNo])
@@ -96,10 +104,9 @@ class SoalActivity : AppCompatActivity() {
                     showResult()
                     return
                 }
-                if (currNo % 2 == 0){
+                if (currNo % 2 == 0) {
                     sc1!!.fullScroll(ScrollView.FOCUS_UP)
-                }
-                else{
+                } else {
                     sc2!!.fullScroll(ScrollView.FOCUS_UP)
                 }
                 prepareQuest(listEval!![++currNo])
@@ -120,10 +127,9 @@ class SoalActivity : AppCompatActivity() {
                     showResult()
                     return
                 }
-                if (currNo % 2 == 0){
+                if (currNo % 2 == 0) {
                     sc1!!.fullScroll(ScrollView.FOCUS_UP)
-                }
-                else{
+                } else {
                     sc2!!.fullScroll(ScrollView.FOCUS_UP)
                 }
                 prepareQuest(listEval!![++currNo])
@@ -143,10 +149,9 @@ class SoalActivity : AppCompatActivity() {
                 showResult()
                 return@setOnClickListener
             }
-            if (currNo % 2 == 0){
+            if (currNo % 2 == 0) {
                 sc1!!.fullScroll(ScrollView.FOCUS_UP)
-            }
-            else{
+            } else {
                 sc2!!.fullScroll(ScrollView.FOCUS_UP)
             }
             prepareQuest(listEval!![++currNo])
@@ -165,10 +170,9 @@ class SoalActivity : AppCompatActivity() {
                 showResult()
                 return@setOnClickListener
             }
-            if (currNo % 2 == 0){
+            if (currNo % 2 == 0) {
                 sc1!!.fullScroll(ScrollView.FOCUS_UP)
-            }
-            else{
+            } else {
                 sc2!!.fullScroll(ScrollView.FOCUS_UP)
             }
             prepareQuest(listEval!![++currNo])
@@ -187,10 +191,9 @@ class SoalActivity : AppCompatActivity() {
                 showResult()
                 return@setOnClickListener
             }
-            if (currNo % 2 == 0){
+            if (currNo % 2 == 0) {
                 sc1!!.fullScroll(ScrollView.FOCUS_UP)
-            }
-            else{
+            } else {
                 sc2!!.fullScroll(ScrollView.FOCUS_UP)
             }
             prepareQuest(listEval!![++currNo])
@@ -210,10 +213,9 @@ class SoalActivity : AppCompatActivity() {
                 showResult()
                 return@setOnClickListener
             }
-            if (currNo % 2 == 0){
+            if (currNo % 2 == 0) {
                 sc1!!.fullScroll(ScrollView.FOCUS_UP)
-            }
-            else{
+            } else {
                 sc2!!.fullScroll(ScrollView.FOCUS_UP)
             }
             prepareQuest(listEval!![++currNo])
@@ -233,10 +235,9 @@ class SoalActivity : AppCompatActivity() {
                 showResult()
                 return@setOnClickListener
             }
-            if (currNo % 2 == 0){
+            if (currNo % 2 == 0) {
                 sc1!!.fullScroll(ScrollView.FOCUS_UP)
-            }
-            else{
+            } else {
                 sc2!!.fullScroll(ScrollView.FOCUS_UP)
             }
             prepareQuest(listEval!![++currNo])
@@ -255,10 +256,9 @@ class SoalActivity : AppCompatActivity() {
                 showResult()
                 return@setOnClickListener
             }
-            if (currNo % 2 == 0){
+            if (currNo % 2 == 0) {
                 sc1!!.fullScroll(ScrollView.FOCUS_UP)
-            }
-            else{
+            } else {
                 sc2!!.fullScroll(ScrollView.FOCUS_UP)
             }
             prepareQuest(listEval!![++currNo])
@@ -277,10 +277,9 @@ class SoalActivity : AppCompatActivity() {
                 showResult()
                 return@setOnClickListener
             }
-            if (currNo % 2 == 0){
+            if (currNo % 2 == 0) {
                 sc1!!.fullScroll(ScrollView.FOCUS_UP)
-            }
-            else{
+            } else {
                 sc2!!.fullScroll(ScrollView.FOCUS_UP)
             }
             prepareQuest(listEval!![++currNo])
@@ -300,10 +299,9 @@ class SoalActivity : AppCompatActivity() {
                     showResult()
                     return
                 }
-                if (currNo % 2 == 0){
+                if (currNo % 2 == 0) {
                     sc1!!.fullScroll(ScrollView.FOCUS_UP)
-                }
-                else{
+                } else {
                     sc2!!.fullScroll(ScrollView.FOCUS_UP)
                 }
                 prepareQuest(listEval!![++currNo])
@@ -411,54 +409,111 @@ class SoalActivity : AppCompatActivity() {
 //    }
 
     private fun prepareQuest(curr: Evaluasi) {
+        //image pertama
+        imagesoal2.setOnClickListener(View.OnClickListener {
+            imagesoal2.visibility = View.GONE
+            frame.visibility = View.GONE
+            frame2.visibility = View.GONE
+            imagesoal2b.visibility = View.VISIBLE
+        })
+        imagesoal2b.setOnClickListener(View.OnClickListener {
+            imagesoal2b.visibility = View.GONE
+            frame.visibility = View.VISIBLE
+            frame2.visibility = View.VISIBLE
+            imagesoal2.visibility = View.VISIBLE
+        })
+
+        imagesoal.setOnClickListener(View.OnClickListener {
+            imagesoal.visibility = View.GONE
+            frame.visibility = View.GONE
+            frame2.visibility = View.GONE
+            imagesoalb.visibility = View.VISIBLE
+        })
+        imagesoalb.setOnClickListener(View.OnClickListener {
+            imagesoalb.visibility = View.GONE
+            frame.visibility = View.VISIBLE
+            frame2.visibility = View.VISIBLE
+            imagesoal.visibility = View.VISIBLE
+        })
+
+        //image ke 2
+
+        image2soal2.setOnClickListener(View.OnClickListener {
+            image2soal2.visibility = View.GONE
+            frame.visibility = View.GONE
+            frame2.visibility = View.GONE
+            image2soal2b2.visibility = View.VISIBLE
+        })
+        image2soal2b2.setOnClickListener(View.OnClickListener {
+            image2soal2b2.visibility = View.GONE
+            frame.visibility = View.VISIBLE
+            frame2.visibility = View.VISIBLE
+            image2soal2.visibility = View.VISIBLE
+        })
+
+        image2soal.setOnClickListener(View.OnClickListener {
+            image2soal.visibility = View.GONE
+            frame.visibility = View.GONE
+            frame2.visibility = View.GONE
+            image2soalb2.visibility = View.VISIBLE
+        })
+        image2soalb2.setOnClickListener(View.OnClickListener {
+            image2soalb2.visibility = View.GONE
+            frame.visibility = View.VISIBLE
+            frame2.visibility = View.VISIBLE
+            image2soal.visibility = View.VISIBLE
+        })
+
+
+
         if (currNo % 2 == 0) {
             // no genap -> child1
-           txtNoSoal!!.text = (currNo + 1).toString() + "."
+            txtNoSoal!!.text = (currNo + 1).toString() + "."
             txtSoal!!.text = curr.soal
 
-            if (currNo == 3){
+            if (currNo == 3) {
                 imagesoal!!.setImageResource(R.mipmap.soal_4a)
-            image2soal!!.setImageResource(R.mipmap.soal_4b)
+                image2soal!!.setImageResource(R.mipmap.soal_4b)
+                imagesoalb!!.setImageResource(R.mipmap.soal_4a)
+                image2soalb2!!.setImageResource(R.mipmap.soal_4b)
 
-
-            }
-            else if (currNo == 5){
+            } else if (currNo == 5) {
                 imagesoal!!.setImageResource(R.mipmap.soal_6)
+                imagesoalb!!.setImageResource(R.mipmap.soal_6)
                 image2soal!!.setImageDrawable(null)
-            }
-            else if (currNo == 8){
+            } else if (currNo == 8) {
                 imagesoal!!.setImageResource(R.mipmap.soal_9)
+                imagesoalb!!.setImageResource(R.mipmap.soal_9)
                 image2soal!!.setImageDrawable(null)
-            }
-            else if (currNo == 9){
+            } else if (currNo == 9) {
                 imagesoal!!.setImageResource(R.mipmap.soal_10)
+                imagesoalb!!.setImageResource(R.mipmap.soal_10)
                 image2soal!!.setImageDrawable(null)
-            }
-            else if (currNo == 16){
+            } else if (currNo == 16) {
                 imagesoal!!.setImageResource(R.mipmap.soal_17)
+                imagesoalb!!.setImageResource(R.mipmap.soal_17)
                 image2soal!!.setImageDrawable(null)
-            }
-            else if (currNo == 17){
+            } else if (currNo == 17) {
                 imagesoal!!.setImageResource(R.mipmap.soal_18)
+                imagesoalb!!.setImageResource(R.mipmap.soal_18)
                 image2soal!!.setImageDrawable(null)
-            }
-            else if (currNo == 18){
+            } else if (currNo == 18) {
                 imagesoal!!.setImageResource(R.mipmap.soal_19)
+                imagesoalb!!.setImageResource(R.mipmap.soal_19)
                 image2soal!!.setImageDrawable(null)
-            }
-            else if (currNo == 19){
+            } else if (currNo == 19) {
                 imagesoal!!.setImageResource(R.mipmap.soal_20a)
+                imagesoalb!!.setImageResource(R.mipmap.soal_20a)
                 image2soal!!.setImageResource(R.mipmap.soal_20b)
-            }
-            else {
+            } else {
                 imagesoal!!.setImageDrawable(null)
                 image2soal!!.setImageDrawable(null)
             }
             btnA!!.text = Html.fromHtml(curr.jwbnA)
-            btnB!!.text = Html.fromHtml( curr.jwbnB)
-            btnC!!.text = Html.fromHtml( curr.jwbnC)
+            btnB!!.text = Html.fromHtml(curr.jwbnB)
+            btnC!!.text = Html.fromHtml(curr.jwbnC)
             btnD!!.text = Html.fromHtml(curr.jwbnD)
-            btnE!!.text = Html.fromHtml( curr.jwbnE)
+            btnE!!.text = Html.fromHtml(curr.jwbnE)
 
             prepareAnswer(true, curr.pilihan == "-", curr)
         } else {
@@ -466,48 +521,50 @@ class SoalActivity : AppCompatActivity() {
             txtNoSoal2!!.text = (currNo + 1).toString() + "."
             txtSoal2!!.text = curr.soal
 
-            if (currNo == 3){
+            if (currNo == 3) {
                 imagesoal2!!.setImageResource(R.mipmap.soal_4a)
                 image2soal2!!.setImageResource(R.mipmap.soal_4b)
+                imagesoal2b!!.setImageResource(R.mipmap.soal_4a)
+                image2soal2b2!!.setImageResource(R.mipmap.soal_4b)
 
-            }
-            else if (currNo == 5){
+            } else if (currNo == 5) {
                 imagesoal2!!.setImageResource(R.mipmap.soal_6)
+                imagesoal2b!!.setImageResource(R.mipmap.soal_6)
                 image2soal2!!.setImageDrawable(null)
-            }
-            else if (currNo == 8){
+            } else if (currNo == 8) {
                 imagesoal2!!.setImageResource(R.mipmap.soal_9)
+                imagesoal2b!!.setImageResource(R.mipmap.soal_9)
                 image2soal2!!.setImageDrawable(null)
-            }
-            else if (currNo == 9){
+            } else if (currNo == 9) {
                 imagesoal2!!.setImageResource(R.mipmap.soal_10)
+                imagesoal2b!!.setImageResource(R.mipmap.soal_10)
                 image2soal2!!.setImageDrawable(null)
-            }
-            else if (currNo == 16){
+            } else if (currNo == 16) {
                 imagesoal2!!.setImageResource(R.mipmap.soal_17)
+                imagesoal2b!!.setImageResource(R.mipmap.soal_17)
                 image2soal2!!.setImageDrawable(null)
-            }
-            else if (currNo == 17){
+            } else if (currNo == 17) {
                 imagesoal2!!.setImageResource(R.mipmap.soal_18)
+                imagesoal2b!!.setImageResource(R.mipmap.soal_18)
                 image2soal2!!.setImageDrawable(null)
-            }
-            else if (currNo == 18){
+            } else if (currNo == 18) {
                 imagesoal2!!.setImageResource(R.mipmap.soal_19)
+                imagesoal2b!!.setImageResource(R.mipmap.soal_19)
                 image2soal2!!.setImageDrawable(null)
-            }
-            else if (currNo == 19){
+            } else if (currNo == 19) {
                 imagesoal2!!.setImageResource(R.mipmap.soal_20a)
                 image2soal2!!.setImageResource(R.mipmap.soal_20b)
-            }
-            else {
+                imagesoal2b!!.setImageResource(R.mipmap.soal_20a)
+                image2soal2b2!!.setImageResource(R.mipmap.soal_20b)
+            } else {
                 imagesoal2!!.setImageDrawable(null)
                 image2soal2!!.setImageDrawable(null)
             }
-            btnA2!!.text = Html.fromHtml( curr.jwbnA)
-            btnB2!!.text = Html.fromHtml( curr.jwbnB)
-            btnC2!!.text = Html.fromHtml( curr.jwbnC)
-            btnD2!!.text = Html.fromHtml( curr.jwbnD)
-            btnE2!!.text = Html.fromHtml(  curr.jwbnE)
+            btnA2!!.text = Html.fromHtml(curr.jwbnA)
+            btnB2!!.text = Html.fromHtml(curr.jwbnB)
+            btnC2!!.text = Html.fromHtml(curr.jwbnC)
+            btnD2!!.text = Html.fromHtml(curr.jwbnD)
+            btnE2!!.text = Html.fromHtml(curr.jwbnE)
 
             prepareAnswer(false, curr.pilihan == "-", curr)
         }
@@ -572,20 +629,20 @@ class SoalActivity : AppCompatActivity() {
         //val dialogview=LayoutInflater.from(this).inflate(R.layout.score,null)
 
 
-        val builder =AlertDialog.Builder(this)
-          //  .setView(dialogview)
+        val builder = AlertDialog.Builder(this)
+        //  .setView(dialogview)
         val layout = LinearLayout(this)
-        val text1= TextView(this)
+        val text1 = TextView(this)
         //val text2= TextView(this)
         text1.text = "Point yang Anda Dapat : " + score.toString()
 
         println(score)
         //text2.text=score.toString()
-        layout.orientation= LinearLayout.VERTICAL
+        layout.orientation = LinearLayout.VERTICAL
 
         layout.addView(text1)
         //layout.addView(text2)
-        layout.setPadding(50,40,50,40)
+        layout.setPadding(50, 40, 50, 40)
         builder.setView(layout)
 
 
@@ -595,13 +652,15 @@ class SoalActivity : AppCompatActivity() {
         //val malertDialogView= builder.show()
 
 
-
 //        dialogview.dialogCancelBtn.setOnclickListener{
 //            malertDialogView.dismiss()
 //        }
 
-        Toast.makeText(applicationContext,"Score anda $score", Toast.LENGTH_SHORT).show()
-      //  finish()
+        Toast.makeText(applicationContext, "Score anda $score", Toast.LENGTH_SHORT).show()
+        //  finish()
 
     }
+
+
 }
+

@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import androidx.viewpager.widget.ViewPager
 import com.viewpagerindicator.CirclePageIndicator
 import kotlinx.android.synthetic.main.activity_materi.*
@@ -73,14 +74,18 @@ class MateriActivity : AppCompatActivity() {
         println("data : " + data)
 
         if(data == "1")  {
+
+
                     sliderItems = ArrayList()
                     sliderItems.add(MateriModel(1, R.drawable.slide4))
                     sliderItems.add(MateriModel(2, R.drawable.slide5))
                     sliderItems.add(MateriModel(3, R.drawable.slide6))
                     sliderItems.add(MateriModel(4, R.drawable.slide7))
                     val adapter = SlideImageAdapter(context, sliderItems as ArrayList<MateriModel>)
-                viewPager.adapter = adapter
+                    viewPager.adapter = adapter
 //
+
+
                }
    if(data == "2") {
                     sliderItems = ArrayList()
