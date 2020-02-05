@@ -118,7 +118,7 @@ class MateriActivity : AppCompatActivity() {
 
        pdf_view.fromAsset("materi2.pdf")
            .enableSwipe(true) // allows to block changing pages using swipe
-           .swipeHorizontal(false)
+           .swipeHorizontal(true)
            .enableDoubletap(true)
            .defaultPage(0)
            .enableAnnotationRendering(false) // render annotations (such as comments, colors or forms)
